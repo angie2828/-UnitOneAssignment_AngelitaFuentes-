@@ -1,241 +1,203 @@
-# Unit 2 | Homework Assignment: Automate Your Day Job with Python
+(the screencast videos are an ad libbed temporary solution until I get a chance to create proper scripted content.)
 
-## Background
+# The no nonsense GitHub Project. 
+![alt tag](img/github_01.png) 
+## A 1 hour no nonsense video tutorial series covering the basic usage of the world's most popular version control software! 
 
-You've made it! It's time to put away the Excel sheet and join the big leagues. Welcome to the world of programming with Python. In this homework assignment, you'll be using the concepts you've learned to complete the required PyBank Python activity, and if you wish to stretch your skills even further, the optional PyRamen Python activity. Both activities present a real-world situation in which your newfound Python skills will come in handy. These activities are far from easy, though, so expect some hard work ahead!
+Are you a self-taught Web or Software developer looking to take your first steps into the world of collaborative development? Or a coding bootcamp student looking to work on your first group project? Or perhaps you have simply never used GIT before and could use a crash course on how to use this software? If any of these apply to you, you've come to the right place.
 
-## Before You Begin
+I'm Michael Desantis! A Full-Stack web developer and Teachers Assistant at the Coding Bootcamp at UT Austin. In this video course I will be introducing the basics of GIT and GitHub (and no, they're not the same thing). I am creating this repository and README here to use as a handy reference guide to accompany the video material.
 
-1. Create a new GitHub repo called `python-homework`. Then, clone it to your computer.
+In this tutorial, you can watch and take notes. Or you can build a GitHub Repository of your own and follow along, pausing the videos as necessary. This course is structured in such a way where all the exercises build on the material from the previous videos. I highly recommend building a repository and following along step-by-step.  
 
-2. In your local git repository, create a directory for both of the Python activities. Use folder names that correspond to the activities: **PyBank** and **PyRamen**.
+The goal of this project is to provide you, the end user, with a brief, concise, and fast-paced instructional on how to use GIT. By the end of these videos, you should have a basic yet functional grasp and understanding of how to implement GIT in your development and projects. Just click the YouTube icons to get started.
 
-3. In each folder you just created, add a new file called `main.ipynb`. Remember that to create this file you will need to use JupyterLab to correctly generate the .ipynb file format. This will be the main notebook to run for each analysis.
 
-4. Push the above changes to GitHub.
+## Video 1 : Introduction to GIT and Version Control.
+In this video, I'll be explaining the 5W's of GIT. What is Git? Why is it important? When should it be used? Who uses it? Where is it used? I'll also show you how to install and configure it for the first time. Don't worry, we'll go over how to use GIT in the next 7 videos.
 
-## PyBank (Required)
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=s6qztDCpZUU) 
 
-![Revenue](Images/revenue-per-lead.jpg)
+##### Helpful Links
 
-In this activity, you are tasked with creating a Python script for analyzing the financial records of your company. You will be provided with a financial dataset in this file: [budget_data.csv](PyBank/Resources/budget_data.csv). This dataset is composed of two columns, Date and Profit/Losses. (Thankfully, your company has rather lax standards for accounting, so the records are simple.)
+1. https://git-scm.com/download  (download page)
+2. https://git-scm.com/book/en/v2/Getting-Started-Installing-Git  (installation guide)
+3. https://help.github.com/articles/set-up-git/ (configure your local computer to match your GitHub account)
+4. https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/ (ssh credentials, because re-entering your password each time is time consuming)
+5. https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/ (git documentation on setting up ssh)
+6. https://services.github.com/kit/downloads/github-git-cheat-sheet.pdf  (github cheat sheet. Your most useful resource on this list)
 
-Your task is to create a Python script that analyzes the records to calculate each of the following:
+##### New GIT commands used
 
-* The total number of months included in the dataset.
+```
+1. git --version  (tells you what version you have installed)
+2. git config --global user.name "Your Name"  (configure username)
+3. git config --global user.email yourname@example.com  (configure email)
+4. git config --list  (display user and email configurations)
+```
 
-* The net total amount of Profit/Losses over the entire period.
+## Video 2 : Building your first repository.
+In this video, I'll guide you through building your first repository on your local computer. As well as how to connect it to GitHub. 
 
-* The average of the changes in Profit/Losses over the entire period.
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=xSXi9sTl0EY) 
 
-* The greatest increase in profits (date and amount) over the entire period.
+##### Helpful Links
 
-* The greatest decrease in losses (date and amount) over the entire period.
+1. https://help.github.com/articles/adding-a-file-to-a-repository-from-the-command-line/ (adding files from command line)
+2. https://github.com/robbyrussell/oh-my-zsh  (oh-my-zsh plugin. It'll make your life a lot easier)
 
-Your resulting analysis should look similar to the following:
+##### New GIT commands used
 
-  ```text
-  Financial Analysis
-  ----------------------------
-  Total Months: 86
-  Total: $38382578
-  Average  Change: $-2315.12
-  Greatest Increase in Profits: Feb-2012 ($1926159)
-  Greatest Decrease in Profits: Sep-2013 ($-2196167)
-  ```
+```
+1. git init  (initialize git in local directory)
+2. git remote add origin git@github.com:Username/Repository-Name  (connect your local repository to github)
+3. git status  (see which files have been changed, and which ones you're adding)
+4. git add fileName (track file, stage it for commit)
+5. git checkout fileName  (discard file changes you don't want to add)
+6. git commit -m "Your Message here" (commit your changes, attach a message, create save point)
+7. git push origin master (send changes from your computer to GitHub)
+8. git reset HEAD fileName  (un-stage a file to prevent commiting it)
+```
 
-Your final script should print the analysis to the terminal and export a text file with the results.
+## Video 3 : Your first collaborative exercise + basic workflow. 
+In this video, I'll show you how to pull the latest changes from GitHub. How to fork and clone other peoples repositories. How to submit a pull request. And showing you a simple GitHub workflow. BONUS: learn how a gitignore file works! 
 
-## PyRamen (Optional)
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=e_NZmxRb8wk) 
 
-![ramen.jpg](Images/ramen.jpg)
 
-## Background
+##### Helpful Links
 
-Welcome to Ichiban Ramen!
+1. https://help.github.com/articles/about-pull-requests/  (more detail on pull requests)
+2. https://help.github.com/articles/fork-a-repo/ (don't worry if this seems a little advanced, we'll go into it in more detail in the upcoming videos)
+3. https://help.github.com/articles/ignoring-files/ (using gitignore files in more depth)
 
-Opening a ramen shop has always been your dream, and now it's finally been realized––you're closing out on your second year of sales! Like last year, you need to analyze your business's financial performance by cross-referencing your sales data with your internal menu data to figure out revenues and costs for the year.
+##### New GIT commands used
 
-This year, you also want to analyze how well your business did on a per-product basis (as you have several choices of ramen) in order to better understand which products are doing well, which are doing poorly, and, ultimately, which products may need to be removed or changed.
+```
+1. touch .gitignore  (create .gitignore file)
+2. git pull origin master  (pull latest changes from your GitHub repository)
+3. git remote -v  (view remote connections)
+```
 
-You tried doing this type of per-product analysis last year in Excel, but you were not able to keep your reports up-to-date with your current sales data. Therefore, you need to innovate. With more customers and more data to process, you'll need a tool that will allow you to automate your calculations in a manner that scales with your business.
+## Video 4 : All about branching.
+In this video, I'll show you what "branching" is. As well as how it works, why it's useful, and how to use it.
 
-Enter Python! Python provides a wide range of capabilities for handling data, harnessing the power of low-level Python data structures and high-level development libraries, all the while supporting the automation and scalability needs for a growing enterprise.
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=ob2gVudg-JI) 
 
-In this homework assignment, you will need to:
+##### Helpful Links
 
-1. [Read the Data](#Read-the-Data)
+1. https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/  (branch management from github)
+2. https://guides.github.com/introduction/flow/ (explanation on why branches are useful)
+3. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging  (branching in more depth)
 
-2. [Manipulate the Data](#Manipulate-the-Data)
+##### New GIT commands used
 
----
+```
+1. git branch  (view all existing branches on your local repository)
+2. git branch branchName (creates a new branch named branchName)
+3. git checkout branchName  (switch from current branch onto a branch named branchName)
+4. git checkout -b branchname (creates a new branch named branchName and switches to it, combination of above two commands)
+5. git branch -d branchName  (delete a branch named branchName)
+6. git merge branchName  (pull changes FROM branch named branchName INTO the branch you're currently on)
+```
 
-## Instructions
+## Video 5 : Dealing with merge conflicts, remote repositories, and developing as a team. 
+In this video, I'll show you some common issues encountered when developing as a team, how to resolve a merge conflicts, how to set up multiple remote repositories, and how to change the url connection to a remote repository. You'll also learn how to fetch changes, pull changes, and merge changes from other repositories sucessfully. 
 
-### Read the Data
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=fy1WsnJZOC4) 
 
-Complete the following:
+##### Helpful Links
 
-* Read in `menu_data.csv` and set its contents to a separate list object. (This way, you can cross-reference your menu data with your sales data as you read in your sales data in the coming steps.)
+1. https://help.github.com/articles/fetching-a-remote/  (the fetch command in more detail)
+2. https://help.github.com/articles/changing-a-remote-s-url/  (changing your remote url)
 
-  * Initialize an empty `menu` list object to hold the contents of `menu_data.csv`.
+##### New GIT commands used
 
-  * Use a `with` statement and open the `menu_data.csv` by using its file path.
+```
+1. git remote add repoName https://github.com/Username/Repository-Name.git  (allows multiple remote repositories)
+2. git fetch repoName branchName  (fetch changes from remote repo WITHOUT automatically merging them)
+3. git pull repoName branchName  (get changes, pull and merge them onto local machine)
+4. git remote set-url repoName git@github.com:Username/Repository-Name  (allows you to change the url for your GIT to GitHub connection)
+5. git remote rm repoName  (remove a remote repository)
+```
 
-  * Use the `reader` function from the `csv` library to begin reading `menu_data.csv`.
+### At this point, you know enough GIT and GitHub to cover 95% of situations you're likely to encounter. I recommend building some familiarity with your new skills before advancing to the next 3 videos.
 
-  * Use the `next` function to skip the header (first row of the CSV).
+## Video 6 When things go wrong, and how to fix them.
+In this video, I'll go over how to roll back to a previous commit in the event that something breaks. You'll also learn how to access previous versions of your code and the importance of why commit messages are so important.
 
-  * Loop over the rest of the rows and append every row to the `menu` list object (the outcome will be a list of lists).
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=uNY04FC2llk) 
 
-* Set up the same process to read in `sales_data.csv`. However, instead append every row of the sales data to a new `sales` list object.
+##### Helpful Links
 
-### Manipulate the Data
+1. https://github.com/blog/2019-how-to-undo-almost-anything-with-git  (undo almost anything in git, detailed article)
+2. http://stackoverflow.com/questions/4372435/how-can-i-rollback-a-github-repository-to-a-specific-commit  (community input on best practices when reverting a commit)
+3. http://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits  (amending a commit message, also touches on git rebase)
+4. http://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit  (git revert syntax, and use cases)
 
-Complete the following:
+##### New GIT commands used
 
-* Initialize an empty `report` dictionary to hold the future aggregated per-product results. The `report` dictionary will eventually contain the following metrics:
+```
+1. git log  (view commit history, messages, and SHA ids for each commit. type 'q' to quit)
+2. git reset --soft HEAD^  (roll back to previous commit, leave changes staged)
+3. git reset --hard HEAD^  (roll back to previous commit, unstage changes)
+4. git reset --hard theSHAid  (roll back to any commit. WARNING: re-writes git history) 
+5. git revert --no-commit theSHAid..HEAD  (revert from HEAD to any previous commit of your choice, just replace theSHAid with the actual SHA hash from the git log)
+6. git revert --continue  (continue forward with your revert. Creates revert commit)
+7. git pull repoName theSHAid  (pull previous commit from remote repository)
+8. git commit --amend -m "new commit message"  (change your previous commit message)
+```
 
-  * `01-count`: the total quantity for each ramen type
+## Video 7 : Git workflow 2.0, debugging and organizing larger GIT projects. 
+In this video, I'll show you how to avoid having to debug large branches with multiple merge conflicts, how to compare and sync up branches in advance to avoid merge conflict disasters, how to compare two separate branches against their parent branch, and how to combine your commits together to keep things organized. You'll also learn a more advanced GIT workflow that will allow for faster development. 
 
-  * `02-revenue`: the total revenue for each ramen type
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=K_ndShku7og) 
 
-  * `03-cogs`: the total cost of goods sold for each ramen type
+##### Helpful Links
 
-  * `04-profit`: the total profit for each ramen type
+1. https://git-scm.com/docs/git-diff  (git diff in detail, additional use cases and options)
+2. https://git-scm.com/docs/git-rebase  (git rebase, maximum level detail)
+3. https://nathanleclaire.com/blog/2014/09/14/dont-be-scared-of-git-rebase/  (git rebase, informal guide)
 
-* Then, loop through every row in the `sales` list object.
+##### New GIT commands used
 
-  * For each row of the `sales` data, set the following columns of the sales data to their own variables:
+```
+1. git diff branch1..branch2  (compare differences between two branches)
+2. git diff branch1...branch2  (compare branch1 and branch2 against their parent branch)
+3. git diff branch1..branch2 >branchlog.txt  (compares two branches, creates branchlog.txt if it doesn't already exist, and prints the output of the branch differences to the text file)
+4. git diff HEAD  (compare current directory to last commit)
+5. git push repoName --delete branchName  (delete a branch named branchName that exists on your remote repository)
+6. git rebase repoName/branchName (merge from repoName branchName into your current branch without creating a merge commit. places your commits at the top in the history line)
+7. git rebase -i HEAD~5  (combine previous 5 commits into one commit. WILL OPEN VIM, use esc, i, :w, :q)
 
-    * Quantity
-    * Menu_Item
+```
 
-  * Perform a quick check if the `sales_item` is already included in the `report`. If not, initialize the key-value pairs for the particular `sales_item` in the report. Then, set the `sales_item` as a new key to the `report` dictionary and the values as a nested dictionary containing the following:
+## Video 8 Documenting/tagging your code + GIT commands in depth.
+In this video, I'll be explaining how versioning works, and why it matters.
 
-    ```python
-    {
-    "01-count": 0,
-    "02-revenue": 0,
-    "03-cogs": 0,
-    "04-profit": 0,
-    }
-    ```
+##### Video Link
+[![](img/youtube_logo.png)](https://www.youtube.com/watch?v=flSRyAraKb4) 
 
-* Create a nested loop by looping through every record in `menu`.
+##### Helpful Links
 
-  * For each row of the `menu` data, set the following columns of the menu data to their own variables:
+1. https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet  (README.md syntax cheat sheet)
+2. http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/  (an article on why documentation matters)
+3. https://git-scm.com/book/en/v2/Git-Basics-Tagging  (git tagging in depth)
 
-    * Item
-    * Price
-    * Cost
+##### New GIT commands used
 
-  * If the `sales_item` in sales is equal to the `item` in `menu`, capture the `quantity` from the sales data and the `price` and `cost` from the menu data to calculate the `profit` for each item.
-
-    * Cumulatively add the values to the corresponding metrics in the report like so:
-
-      ```python
-      report[sales_item]["01-count"] += quantity
-      report[sales_item]["02-revenue"] += price * quantity
-      report[sales_item]["03-cogs"] += cost * quantity
-      report[sales_item]["04-profit"] += profit * quantity
-      ```
-
-  * Else print the message "{sales_item} does not equal {item}! NO MATCH!".
-
-* Write out the contents of the `report` dictionary to a text file. The report should output each ramen type as the keys and `01-count`, `02-revenue`, `03-cogs`, and `04-profit` metrics as the values for every ramen type as shown:
-
-  ```
-  spicy miso ramen {'01-count': 9238, '02-revenue': 110856.0, '03-cogs': 46190.0, '04-profit': 64666.0}
-  tori paitan ramen {'01-count': 9156, '02-revenue': 119028.0, '03-cogs': 54936.0, '04-profit': 64092.0}
-  truffle butter ramen {'01-count': 8982, '02-revenue': 125748.0, '03-cogs': 62874.0, '04-profit': 62874.0}
-  tonkotsu ramen {'01-count': 9288, '02-revenue': 120744.0, '03-cogs': 55728.0, '04-profit': 65016.0}
-  vegetarian spicy miso {'01-count': 9216, '02-revenue': 110592.0, '03-cogs': 46080.0, '04-profit': 64512.0}
-  shio ramen {'01-count': 9180, '02-revenue': 100980.0, '03-cogs': 45900.0, '04-profit': 55080.0}
-  miso crab ramen {'01-count': 8890, '02-revenue': 106680.0, '03-cogs': 53340.0, '04-profit': 53340.0}
-  nagomi shoyu {'01-count': 9132, '02-revenue': 100452.0, '03-cogs': 45660.0, '04-profit': 54792.0}
-  soft-shell miso crab ramen {'01-count': 9130, '02-revenue': 127820.0, '03-cogs': 63910.0, '04-profit': 63910.0}
-  burnt garlic tonkotsu ramen {'01-count': 9070, '02-revenue': 126980.0, '03-cogs': 54420.0, '04-profit': 72560.0}
-  vegetarian curry + king trumpet mushroom ramen {'01-count': 8824, '02-revenue': 114712.0, '03-cogs': 61768.0, '04-profit': 52944.0}
-  ```
-
----
-
-## Resources
-
-* [Stack Overflow](https://www.stackoverflow.com): A wealth of community-driven questions and answers, particularly effective for IT solution seekers.
-
-* [Python Basics](https://pythonbasics.org/): Contains example materials and exercises for the Python 3 programming language.
-
-* [Python Documentation](https://docs.python.org/3/): Official Python documentation
-
----
-
-## Hints and Considerations
-
-* Consider what we've learned so far. To date, we've learned how to import modules like `csv`; to read and write files in various formats; to store contents in variables, lists, and dictionaries; to iterate through basic data structures; and to debug along the way. Using what we've learned, try to break down you tasks into discrete mini-objectives. This will be a *much* better course of action than attempting to Google search for a miracle.
-
-* As you will discover, for some of these activities, the datasets are quite large. This was done purposefully, as it showcases one of the limits of Excel-based analysis. While our first instinct as data analysts is often to head straight to Excel, creating scripts in Python can provide us with more robust options for handling "big data."
-
-* Your scripts should work for each dataset provided. Run your script for each dataset separately to make sure that the code works for different data.
-
-* Feel encouraged to work in groups, but don't shortchange yourself by copying someone else's work. Dig your heels in, burn the night oil, and learn this while you can! These are skills that will pay dividends in your future career.
-
-* **Start early**, and reach out for help often! Challenge yourself to identify _specific_ questions for your instructors and TAs. Don't resign yourself to simply saying, "I'm totally lost." Come prepared to show your effort and thought patterns, we'll be happy to help along the way.
-
-* Always commit your work (and do it often!) and back it up with GitHub pushes. You don't want to lose hours of your work because you didn't push it to GitHub every half hour or so.
-
-## Submission
-
-* Upload homework files to your GitHub repo.
-
-* Submit the link to your GitHub repo on Bootcamp Spot.
-
----
-### Requirements
-
-#### Set Up Project  (35 points)
-
-##### To receive all points, you must:
-
-* Create a GitHub repo named: `python-homework`. (10 points)
-* Create a directory within your repository to store the activity. (5 points)
-* Add a notebook file named `main.ipynb` to your directory. (10 points)
-* Update the repository with your latest changes. (10 points)
-
-#### Analysis and Calculations (35 points)
-
-##### To receive all points, your code must:
-
-* Include a calculation of the total number of months in the dataset. (2 points)
-* Calculate the net total amount of Profit/Losses over the entire period. (3 points)
-* Calculate the average of the changes in Profit/Losses over the entire period. (5 points)
-* Calculate the greatest increase in Profits over the entire period (Date and Amount). (10 points)
-* Calculate the greatest decrease in Losses over the entire period (Date and Amount). (10 points)
-* Print the analysis and export the analysis to a text file that contains the final results. (5 points)
-
-#### Coding Conventions and Formatting (10 points)
-
-##### To receive all points, your code must:
-
-* Place imports at the beginning of the file, just after any module comments and docstrings and before module globals and constants. (3 points)
-* Name functions and variables with lowercase characters and with words separated by underscores. (2 points)
-* Follow Don't Repeat Yourself (DRY) principles by creating maintainable and reusable code. (3 points)
-* Use concise logic and creative engineering where possible. (2 points)
-
-#### Deployment and Submission (10 points)
-
-##### To receive all points, you must:
-
-* Submit a link to a GitHub repository that’s cloned to your local machine and contains your files. (5 points)
-* Include appropriate commit messages in your files. (5 points)
-
-#### Code Comments (10 points)
-
-##### To receive all points, your code must:
-
-* Be well commented with concise, relevant notes that other developers can understand. (10 points)
-
----
-
-© 2021 Trilogy Education Services
+```
+1. git tag -a v0.0 -m "message" (assign a version number of 0.0 and a message to a commit.)
+2. git tag  (view existing tags)
+3. git show v1.0  (show version 1.0 and associated information)
+4. git tag -d v0.0.1  (remove a tag)
+5. git --help  (brings up help menu and displays common options)
+6. git commandName --help  (display full manual on usage of specified command. Press q to exit doc)
+```
