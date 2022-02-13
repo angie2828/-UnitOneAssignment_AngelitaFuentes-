@@ -1,4 +1,4 @@
-##UnitOneAssignment_AngelitaFuentes##
+### UnitOneAssignment_AngelitaFuentes##
 
 Milo Credit
 Fintech Case Study – Lending – Milo Credit incorporated in 2018. Josip Rupena is the CEO founder along with brother Daniel Rupena who is the manager and strategist.
